@@ -51,7 +51,13 @@ function doneOrNot(board) {
       }
       if (
         (i === 1 && j === 1) ||
+        (i === 1 && j === 4) ||
+        (i === 1 && j === 7) ||
+        (i === 4 && j === 1) ||
         (i === 4 && j === 4) ||
+        (i === 4 && j === 7) ||
+        (i === 7 && j === 1) ||
+        (i === 7 && j === 4) ||
         (i === 7 && j === 7)
       ) {
         square.push(board[i - 1][j - 1]);
@@ -79,5 +85,5 @@ function doneOrNot(board) {
   return "Finished!";
 }
 
-console.log(doneOrNot(wrongSudoku));
-console.log(doneOrNot(correctSudoku));
+doneOrNot(wrongSudoku);
+doneOrNot(correctSudoku);
