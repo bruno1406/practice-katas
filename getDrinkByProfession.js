@@ -9,20 +9,15 @@
 // "Rapper"	"Cristal"
 // anything else	"Beer"
 
-function getDrinkByProfession(param) {
+function getDrinkByProfession(param){
+  console.log(param)
   const obj = {
-    jabroni: "Patron Tequila",
-    schoolcounselor: "Anything with Alcohol",
-    programmer: "Hipster Craft Beer",
-    bikegangmember: "Moonshine",
-    politician: "Your tax dollars",
-    rapper: "Cristal",
-    all: "Beer",
+    "jabroni": "Patron Tequila",
+    "school counselor": "Anything with Alcohol",
+    "programmer": "Hipster Craft Beer",
+    "bike gang member": "Moonshine",
+    "politician": "Your tax dollars",
+    "rapper": "Cristal"
   };
-  let profession = param.toLowerCase().split(" ").join("");
-  if (obj[profession]) {
-    return obj[profession];
-  } else {
-    return obj.all;
-  }
-}
+
+  return obj[param.toLowerCase()] || "Beer"
