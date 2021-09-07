@@ -6,27 +6,23 @@
 // highAndLow("1 2 -3 4 5"); // return "5 -3"
 // highAndLow("1 9 3 4 -5"); // return "9 -5"
 
+function highAndLow(numbers) {
+  let arr = numbers.split(" ");
 
+  let high = Number(arr[0]);
+  let low = Number(arr[0]);
 
-function highAndLow(numbers){
-    let high = 0;
-    let low = 0;
-    
-    let arr = numbers.split(" ")
-    
-    const arrMap = arr.map(x =>  {
-      
-        if (high === 0) {
-        high = Number(x)
-      } else if (Number(x)> high) {
-        high = Number(x)
-      }
-    
-      if (low === 0) {
-        low = Number(x)
-      } else if (Number(x)< low) {
-        low = Number(x)
-      }
-      
-      return Number(x)
-    })
+  arr.forEach((x) => {
+    if (Number(x) > high) {
+      high = Number(x);
+    }
+    if (Number(x) < low) {
+      low = Number(x);
+    }
+  });
+  return `${high}${low}`;
+}
+
+let word = "1 2 3 4 5";
+
+console.log(highAndLow(word));
