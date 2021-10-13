@@ -21,3 +21,9 @@ function rowSumOddNumbers(n) {
   }
   return num;
 }
+
+//best solution
+
+// function rowSumOddNumbers(n) {
+//     return Math.pow(n, 3);
+//   }
