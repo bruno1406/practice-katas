@@ -18,3 +18,8 @@ function createPhoneNumber(numbers) {
 //     }
 //     return format;
 //   }
+
+//even better, one liner:
+// function createPhoneNumber(numbers){
+//     return numbers.reduce((p,c) => p.replace('x',c), "(xxx) xxx-xxxx");
+//  }
