@@ -5,3 +5,24 @@
 // current father's age (years)
 // current age of his son (years)
 // Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old).
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  let years = 0;
+
+  if (sonYearsOld * 2 < dadYearsOld) {
+    while (dadYearsOld !== sonYearsOld * 2) {
+      sonYearsOld++;
+      dadYearsOld++;
+      years++;
+    }
+  }
+  if (sonYearsOld * 2 > dadYearsOld) {
+    while (dadYearsOld !== sonYearsOld * 2) {
+      sonYearsOld--;
+      dadYearsOld--;
+      years++;
+    }
+  }
+
+  return years;
+}
