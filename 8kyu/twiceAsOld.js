@@ -26,3 +26,9 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
 
   return years;
 }
+
+//One liner
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld - 2 * sonYearsOld);
+}
