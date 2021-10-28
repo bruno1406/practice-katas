@@ -23,3 +23,9 @@ function remove(s) {
   str += excl;
   return str;
 }
+
+//one liner
+
+// function remove(s) {
+//     return s.replace(/!/g, '') + s.replace(/[^!]/g, '');
+//   }
