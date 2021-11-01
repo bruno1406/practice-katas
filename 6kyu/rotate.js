@@ -4,3 +4,13 @@
 //returns an array of strings with each letter from the input string being rotated to the end.
 
 // rotate("Hello") // => ["elloH", "lloHe", "loHel", "oHell", "Hello"]
+
+function rotate(str) {
+  let arr = [];
+  for (let i = 0; i < str.length; i++) {
+    str += str[0];
+    str = str.replace(str[0], "");
+    arr.push(str);
+  }
+  return arr;
+}
