@@ -14,3 +14,14 @@ function rotate(str) {
   }
   return arr;
 }
+
+//one liner
+
+//function rotate(str){
+// return str.split("").map(letter=>{
+//     str+=str.slice(0, 1)
+//     str=str.slice(1)
+//     return str
+//   });
+
+//   }
