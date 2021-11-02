@@ -26,13 +26,11 @@ function josephus(items, k) {
   let arr = [];
   let num = items.length;
   let sum = 0;
-  console.log("itmes", items, "k", k);
+
   for (let i = 0; i < num; i++) {
     sum = (sum + k - 1) % items.length;
     arr.push(items[sum]);
     items.splice(sum, 1);
-
-    console.log("arr", arr);
   }
 
   return arr;
