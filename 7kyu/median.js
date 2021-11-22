@@ -12,3 +12,16 @@
 // Examples
 // Median of [33,99,100,30,29,50] is 41.5.
 // Median of 3,2,1] is 2.
+
+function median(array) {
+  array.sort(function (a, b) {
+    return a - b;
+  });
+  let median = 0;
+  if (array.length % 2 == 0) {
+    median = (array[array.length / 2] + array[array.length / 2 - 1]) / 2;
+  } else {
+    median = array[Math.floor(array.length / 2)];
+  }
+  return median;
+}
