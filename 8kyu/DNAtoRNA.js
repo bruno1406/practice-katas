@@ -9,3 +9,10 @@
 // For example:
 
 // "GCAT"  =>  "GCAU"
+
+function DNAtoRNA(dna) {
+  return dna
+    .split("")
+    .map((char) => (char === "T" ? "U" : char))
+    .join("");
+}
