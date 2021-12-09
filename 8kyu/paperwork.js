@@ -7,3 +7,7 @@
 // Example:
 // n= 5, m=5: 25
 // n=-5, m=5:  0
+
+function paperwork(n, m) {
+  return m < 0 || n < 0 ? 0 : n * m;
+}
