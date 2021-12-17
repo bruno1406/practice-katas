@@ -33,3 +33,14 @@
 // f11 = -5 so he has no way to withdraw something for his living in year 12.
 // Note:
 // Don't forget to convert the percent parameters as percentages in the body of your function: if a parameter percent is 2 you have to convert it to 0.02.
+
+function fortune(f0, p, c0, n, i) {
+  f0 = Math.floor(f0 + (p / 100) * f0 - c0);
+  c0 = Math.floor(c0 + (c0 * i) / 100);
+  n -= 1;
+  return n > 1 && f0 > 0
+    ? fortune(f0, p, c0, n, i)
+    : n == 1 && f0 >= 0
+    ? true
+    : false;
+}
