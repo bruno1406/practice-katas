@@ -17,3 +17,25 @@
 // For score = "30-all", the output should be 4.
 
 // The players have won 2 points each.
+
+function tennisGamePoints(score) {
+  let arr = score.split("-");
+  let score1 = arr[0];
+  let score2 = arr[1];
+
+  if (score1 === "love") {
+    score1 = 0;
+  } else {
+    score1 = Math.ceil(score1 / 15);
+  }
+
+  if (score2 == "all") {
+    score2 = score1;
+  } else if (score2 === "love") {
+    score2 = 0;
+  } else {
+    score2 = Math.ceil(score2 / 15);
+  }
+
+  return score1 + score2;
+}
