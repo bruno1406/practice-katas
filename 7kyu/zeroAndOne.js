@@ -34,3 +34,9 @@ function replaceChar(origString, replaceChar, index) {
   let newString = firstPart + replaceChar + lastPart;
   return newString;
 }
+
+//One liner
+
+function zeroAndOne(s) {
+  return s.replace(/(10|01)/g, "").length;
+}
