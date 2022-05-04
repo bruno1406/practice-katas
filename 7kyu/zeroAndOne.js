@@ -13,3 +13,24 @@
 // For "110100" the result should be 2:
 
 // "110100"  -->  "1  100"  -->  "1    0"
+
+function zeroAndOne(s) {
+  for (let i = 1; i < s.length; i++) {
+    if (s[i - 1] === " ") {
+      continue;
+    }
+    if (s[i] !== s[i - 1]) {
+      s = replaceChar(s, " ", i);
+      s = replaceChar(s, " ", i - 1);
+    }
+  }
+  return s.length - (s.match(/ /g) || []).length;
+}
+
+function replaceChar(origString, replaceChar, index) {
+  let firstPart = origString.substr(0, index);
+  let lastPart = origString.substr(index + 1);
+
+  let newString = firstPart + replaceChar + lastPart;
+  return newString;
+}
