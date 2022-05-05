@@ -10,3 +10,10 @@
 // Super => [2,4]
 // Apple => [1,5]
 // YoMama -> [1,2,4,6]
+
+function vowelIndices(word) {
+  return word
+    .split("")
+    .map((letter, i) => (/[aeiouyAEIOUY]/.test(letter) ? i + 1 : ""))
+    .filter(Number);
+}
