@@ -17,3 +17,13 @@
 // "Nananananananananananananananana Batman!"
 // -->
 // "####################################man!"
+
+function maskify(cc) {
+  return cc.length <= 4
+    ? cc
+    : "#".repeat(cc.length - 4) + cc.substring(cc.length - 4);
+}
+
+function maskify(cc) {
+  return cc.slice(0, -4).replace(/./g, "#") + cc.slice(-4);
+}
