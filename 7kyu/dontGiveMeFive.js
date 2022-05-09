@@ -15,3 +15,22 @@
 // Have fun coding it and please don't forget to vote and rank this kata! :-)
 
 // I have also created other katas. Take a look if you enjoyed this kata!
+
+function dontGiveMeFive(start, end) {
+  console.log(start, end);
+  let count = 0;
+  for (let i = start; i <= end; i++) {
+    console.log("i", i);
+    if (i >= 50 && i <= 59) {
+      continue;
+    } else if (i % 10 === 0) {
+      count++;
+    } else if (i % 5 === 0) {
+      continue;
+    } else {
+      count++;
+    }
+    console.log("count", count);
+  }
+  return count;
+}
