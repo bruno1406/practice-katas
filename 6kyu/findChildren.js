@@ -10,3 +10,16 @@
 // -Function input: String contains only letters, uppercase letters are unique.
 // Task:
 // Place all people in alphabetical order where Mothers are followed by their children, i.e. "aAbaBb" => "AaaBbb".
+
+function findChildren(dancingBrigade) {
+  let arr = dancingBrigade
+    .split("")
+    .map((letter) => letter.toLowerCase())
+    .sort()
+    .join("")
+    .match(/(.)\1*/g);
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+  }
+  return arr.join("");
+}
