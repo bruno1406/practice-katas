@@ -17,5 +17,5 @@
 //                                        #  9+3 = 12  -->  2
 
 function incrementer(nums) {
-  return nums.length === 0 ? [] : nums.map((num, i) => (num + i + 1) % 10);
+  return nums.map((num, i) => (num + i + 1) % 10);
 }
