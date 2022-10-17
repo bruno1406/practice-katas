@@ -16,3 +16,16 @@
 // our team always plays 10 matches in the championship
 // 0 <= x <= 4
 // 0 <= y <= 4
+
+function points(games) {
+  let result = 0;
+  console.log(games);
+  for (let i = 0; i < games.length; i++) {
+    if (parseInt(games[i].charAt(0)) > parseInt(games[i].charAt(2))) {
+      result += 3;
+    } else if (parseInt(games[i].charAt(0)) == parseInt(games[i].charAt(2))) {
+      result += 1;
+    }
+  }
+  return result;
+}
