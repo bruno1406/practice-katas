@@ -6,3 +6,17 @@
 // Input: 145263 Output: 654321
 
 // Input: 123456789 Output: 987654321
+
+function descendingOrder(n) {
+  return parseInt(
+    n
+      .toString()
+      .split("")
+      .map((ch) => parseInt(ch, 10))
+      .sort(function (a, b) {
+        return b - a;
+      })
+      .join(""),
+    10
+  );
+}
