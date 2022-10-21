@@ -20,3 +20,9 @@ function descendingOrder(n) {
     10
   );
 }
+
+// Best variation:
+
+function descendingOrder1(n) {
+  return parseInt(String(n).split("").sort().reverse().join(""));
+}
