@@ -3,3 +3,7 @@
 // Only numbers without decimals like 4 or 4.0 can be even.
 
 // The input is a sequence of numbers: integers and/or floats.
+
+function sumEvenNumbers(input) {
+  return input.reduce((prev, curr) => (curr % 2 === 0 ? prev + curr : prev), 0);
+}
