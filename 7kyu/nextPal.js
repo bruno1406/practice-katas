@@ -15,3 +15,16 @@
 // You will be receiving values higher than 10, all valid.
 
 // Enjoy it!!
+
+function nextPal(val) {
+  let result = false;
+  let nums = Number(parseInt(val.toString().split("").reverse().join("")));
+  let reverse = 0;
+
+  for (let i = val + 1; result === false; i++) {
+    reverse = Number(parseInt(i.toString().split("").reverse().join("")));
+    if (i === reverse) {
+      return i;
+    }
+  }
+}
