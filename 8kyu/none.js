@@ -5,3 +5,9 @@ function none(arr, fun) {
   let result = arr.filter((item) => fun(item) === true);
   return result.length > 0 ? false : true;
 }
+
+//best solution:
+
+// function none(arr, fun){
+//     return !arr.some(fun);
+//   }
