@@ -17,3 +17,13 @@
 // For Python: return True or False
 // For JavaScript: return true or false
 // Other languages: return 1 or 0 or refer to Sample Tests.
+
+function isPythagoreanTriple(integers) {
+  return integers[0] ** 2 === integers[1] ** 2 + integers[2] ** 2
+    ? true
+    : integers[1] ** 2 === integers[0] ** 2 + integers[2] ** 2
+    ? true
+    : integers[2] ** 2 === integers[1] ** 2 + integers[0] ** 2
+    ? true
+    : false;
+}
