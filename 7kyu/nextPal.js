@@ -17,11 +17,8 @@
 // Enjoy it!!
 
 function nextPal(val) {
-  let result = false;
-  let nums = Number(parseInt(val.toString().split("").reverse().join("")));
   let reverse = 0;
-
-  for (let i = val + 1; result === false; i++) {
+  for (let i = val + 1; ; i++) {
     reverse = Number(parseInt(i.toString().split("").reverse().join("")));
     if (i === reverse) {
       return i;
