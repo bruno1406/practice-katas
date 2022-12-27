@@ -5,3 +5,6 @@
 function grow(x) {
   return x.reduce((accumulator, currentValue) => accumulator * currentValue, 1);
 }
+
+//short
+//const grow=x=> x.reduce((a,b) => a*b);
