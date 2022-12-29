@@ -13,3 +13,11 @@
 // keys = ['a', 'b', 'c']
 // values = [1, 2, 3, 4]
 // createDict(keys, values) // returns {'a': 1, 'b': 2, 'c': 3}
+
+function createDict(keys, values) {
+  let dict = {};
+  for (let i = 0; i < keys.length; i++) {
+    dict[keys[i]] = values[i] === undefined ? null : values[i];
+  }
+  return dict;
+}
