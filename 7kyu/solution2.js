@@ -4,3 +4,11 @@
 
 // solution('abc', 'bc') // returns true
 // solution('abc', 'd') // returns false
+
+function solution(str, ending) {
+  return ending.length == 0
+    ? true
+    : str.slice(-ending.length) === ending
+    ? true
+    : false;
+}
