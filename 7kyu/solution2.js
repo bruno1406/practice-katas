@@ -12,3 +12,9 @@ function solution(str, ending) {
     ? true
     : false;
 }
+
+//best code:
+
+// function solution(str, ending){
+//   return str.endsWith(ending);
+// }
