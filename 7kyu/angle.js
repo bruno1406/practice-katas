@@ -3,3 +3,6 @@
 function angle(n) {
   return (n - 2) * 180;
 }
+
+//const function
+// const angle = n => (n - 2) * 180;
